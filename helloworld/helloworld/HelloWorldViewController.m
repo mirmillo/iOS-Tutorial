@@ -13,6 +13,8 @@
 @end
 
 @implementation HelloWorldViewController
+@synthesize textField;
+@synthesize label;
 
 - (void)viewDidLoad
 {
@@ -22,6 +24,8 @@
 
 - (void)viewDidUnload
 {
+    [self setTextField:nil];
+    [self setLabel:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
@@ -35,4 +39,6 @@
     }
 }
 
+- (IBAction)changeGreeting:(id)sender {
+}
 @end
